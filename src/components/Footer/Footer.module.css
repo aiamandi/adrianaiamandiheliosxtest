@@ -1,0 +1,19 @@
+.Container {
+  @apply border-t border-gray-200 h-40 flex mt-40;
+}
+
+.Footer {
+  @apply max-w-2xl m-auto flex w-full justify-between;
+}
+
+.Footer__column {
+  @apply w-1/2 text-center flex flex-col;
+}
+
+.Footer__title {
+  @apply font-bold text-base mb-2;
+}
+
+.Footer__link {
+  @apply text-sm text-blue-500;
+}

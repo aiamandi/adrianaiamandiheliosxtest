@@ -1,0 +1,7 @@
+.Container {
+  @apply border-b border-gray-200;
+}
+
+.Logo {
+  @apply ml-auto h-20;
+}

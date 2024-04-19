@@ -1,0 +1,28 @@
+.Questionnaire {
+  @apply flex flex-col items-center justify-center text-center mt-20 max-w-2xl m-auto px-4;
+}
+
+.Questionnaire__title {
+  @apply text-3xl font-bold;
+}
+
+.Questionnaire__description {
+  @apply text-lg py-4;
+}
+
+.Questionnaire__questions {
+  @apply text-lg font-bold p-4 pb-8 my-4 w-full;
+}
+
+.Questionnaire__questions-container {
+  @apply flex m-auto justify-between mt-8 w-[75%];
+  @apply md:w-5/12;
+}
+
+.Questionnaire__previous {
+  @apply rounded-3xl border-blue-700 border p-2 w-12 h-12;
+}
+
+.Questionnaire__message {
+  @apply text-lg font-bold mt-4 text-blue-700;
+}
