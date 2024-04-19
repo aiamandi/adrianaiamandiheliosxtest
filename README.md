@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+# Questionnaire Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple questionnaire application built with vite, React and Tailwind CSS.
 
-Currently, two official plugins are available:
+# Running the project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In order to run the project locally, run npm run dev. I'm running localy node v18.17.1
 
-## Expanding the ESLint configuration
+# Notes
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+I have split out the questionnaire into different reusable components. If I had more time, I would have used different styling and split the project into even smaller components but since this is a small project and I won't be reusing the components anywhere else, I have only taken out the big ones.
 
-- Configure the top-level `parserOptions` property like this:
+I would have also added a basic unit test that would have been functional but here is an outline of a basic test.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+<!-- import { render, fireEvent } from '@testing-library/react';
+import Questionnaire from './Questionnaire';
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+test('renders questionnaire and handles user interaction', () => {
+  const handleAnswer = jest.fn();
+  const { getByText, getByLabelText } = render(
+    <Questionnaire handleAnswer={handleAnswer} />
+  );
+
+  // Check if the first question is rendered
+  expect(getByText('Question 1')).toBeInTheDocument();
+
+  // Simulate user selecting "Yes" for the first question
+  fireEvent.click(getByLabelText('Yes'));
+
+  // Check if the handleAnswer function was called with "Yes"
+  expect(handleAnswer).toHaveBeenCalledWith('Yes');
+
+  // Simulate user clicking the "Next" button
+  fireEvent.click(getByText('Next'));
+
+  // Check if the second question is rendered
+  expect(getByText('Question 2')).toBeInTheDocument();
+}); -->
