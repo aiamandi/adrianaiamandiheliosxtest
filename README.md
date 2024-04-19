@@ -12,27 +12,27 @@ I have split out the questionnaire into different reusable components. If I had 
 
 I would have also added a basic unit test that would have been functional but here is an outline of a basic test.
 
-<!-- import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import Questionnaire from './Questionnaire';
 
 test('renders questionnaire and handles user interaction', () => {
-  const handleAnswer = jest.fn();
-  const { getByText, getByLabelText } = render(
-    <Questionnaire handleAnswer={handleAnswer} />
-  );
+const handleAnswer = jest.fn();
+const { getByText, getByLabelText } = render(
+<Questionnaire handleAnswer={handleAnswer} />
+);
 
-  // Check if the first question is rendered
-  expect(getByText('Question 1')).toBeInTheDocument();
+// Check if the first question is rendered
+expect(getByText('Question 1')).toBeInTheDocument();
 
-  // Simulate user selecting "Yes" for the first question
-  fireEvent.click(getByLabelText('Yes'));
+// Simulate user selecting "Yes" for the first question
+fireEvent.click(getByLabelText('Yes'));
 
-  // Check if the handleAnswer function was called with "Yes"
-  expect(handleAnswer).toHaveBeenCalledWith('Yes');
+// Check if the handleAnswer function was called with "Yes"
+expect(handleAnswer).toHaveBeenCalledWith('Yes');
 
-  // Simulate user clicking the "Next" button
-  fireEvent.click(getByText('Next'));
+// Simulate user clicking the "Next" button
+fireEvent.click(getByText('Next'));
 
-  // Check if the second question is rendered
-  expect(getByText('Question 2')).toBeInTheDocument();
-}); -->
+// Check if the second question is rendered
+expect(getByText('Question 2')).toBeInTheDocument();
+});
